@@ -49,7 +49,7 @@ export function WholesaleForm() {
 
   const fieldCls =
     "w-full rounded-none border-b border-[color:var(--gold-soft)] bg-transparent px-1 py-3 text-base text-[color:var(--cocoa)] placeholder:text-[color:var(--taupe)]/60 outline-none transition-colors focus:border-[color:var(--gold)]";
-  const labelCls = "tracked-tight mb-1 block text-[10px] text-[color:var(--taupe)]";
+  const labelCls = "tracked-tight mb-1 block text-xs text-[color:var(--taupe)]";
 
   return (
     <form onSubmit={onSubmit} className="mx-auto w-full max-w-xl space-y-6">
@@ -79,13 +79,13 @@ export function WholesaleForm() {
         <button
           type="submit"
           disabled={state === "loading"}
-          className="tracked-tight rounded-none border border-[color:var(--cocoa)] bg-transparent px-10 py-3 text-xs text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)] disabled:opacity-60"
+          className="tracked-tight rounded-none border border-[color:var(--cocoa)] bg-transparent px-10 py-3 text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)] disabled:opacity-60"
         >
           {state === "loading" ? "Sending…" : "Request Early Access"}
         </button>
       </div>
       {error && (
-        <p className="text-center text-sm text-[color:var(--taupe)]">{error}</p>
+        <p className="text-center text-base text-[color:var(--taupe)]">{error}</p>
       )}
     </form>
   );

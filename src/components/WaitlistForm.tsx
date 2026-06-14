@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { siteConfig, isConfigured } from "@/config/site";
+import { subscribeToWaitlist } from "@/lib/waitlist.functions";
 
 export function WaitlistForm() {
   const [email, setEmail] = useState("");
@@ -15,28 +15,9 @@ export function WaitlistForm() {
     }
     setState("loading");
 
-    const apiKey = siteConfig.MAILERLITE_API_KEY;
-    const groupId = siteConfig.MAILERLITE_GROUP_ID;
-
-    // If MailerLite isn't configured yet, gracefully show the confirmation
-    // so the page still works in preview mode.
-    if (!isConfigured(apiKey) || !isConfigured(groupId)) {
-      await new Promise((r) => setTimeout(r, 500));
-      setState("done");
-      return;
-    }
-
     try {
-      const res = await fetch("https://connect.mailerlite.com/api/subscribers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({ email, groups: [groupId] }),
-      });
-      if (!res.ok) throw new Error("Request failed");
+      const result = await subscribeToWaitlist({ data: { email } });
+      if (!result.ok) throw new Error("Request failed");
       setState("done");
     } catch {
       setState("error");

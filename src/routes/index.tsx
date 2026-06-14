@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logo from "@/assets/menasik-logo.png";
+import logoAsset from "@/assets/menasik-logo.asset.json";
 import { siteConfig, isConfigured } from "@/config/site";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WholesaleForm } from "@/components/WholesaleForm";
-import { IslamicStar, ArchMotif } from "@/components/IslamicStar";
+import { IslamicStar, ArchMotif, PalmShadow } from "@/components/IslamicStar";
+
+const logo = logoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -55,14 +57,17 @@ function Landing() {
       <ArchMotif className="pointer-events-none absolute -top-20 left-1/2 -z-10 h-[120vh] w-[80vw] -translate-x-1/2 text-[color:var(--gold)] opacity-[0.06]" />
 
       {/* ============== HERO ============== */}
-      <section className="sacred-backdrop relative flex min-h-[100svh] flex-col items-center justify-center px-6 py-20 text-center">
-        <div className="fade-in" style={{ animationDelay: "0.05s" }}>
+      <section className="sacred-backdrop relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6 py-20 text-center">
+        {/* warm palm-frond shadow overlay (top-left, like sunlight through leaves) */}
+        <PalmShadow className="pointer-events-none absolute -left-24 -top-20 h-[70vh] w-[70vh] text-[color:var(--cocoa)] opacity-[0.07] md:-left-10" />
+
+        <div className="fade-in relative" style={{ animationDelay: "0.05s" }}>
           <img
             src={logo}
             alt="Menasik — مناسك"
-            width={280}
-            height={280}
-            className="mx-auto h-44 w-44 select-none object-contain drop-shadow-[0_8px_30px_rgba(92,79,61,0.08)] sm:h-56 sm:w-56 md:h-64 md:w-64"
+            width={560}
+            height={400}
+            className="mx-auto h-44 w-auto select-none object-contain mix-blend-multiply sm:h-56 md:h-64"
           />
         </div>
 
@@ -161,10 +166,10 @@ function Landing() {
           <img
             src={logo}
             alt="Menasik"
-            width={64}
-            height={64}
+            width={160}
+            height={120}
             loading="lazy"
-            className="h-16 w-16 object-contain opacity-90"
+            className="h-16 w-auto object-contain opacity-90 mix-blend-multiply"
           />
           <p className="font-serif text-lg italic text-[color:var(--cocoa)]">
             Menasik — Pack Less. Worship More.

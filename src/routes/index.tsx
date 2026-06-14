@@ -74,7 +74,7 @@ function Landing() {
         </div>
 
         <p
-          className="tracked fade-up mt-10 text-[11px] text-[color:var(--taupe)]"
+          className="tracked fade-up mt-10 text-sm text-[color:var(--taupe)]"
           style={{ animationDelay: "0.35s" }}
         >
           Coming Soon
@@ -88,7 +88,7 @@ function Landing() {
         </h1>
 
         <p
-          className="fade-up mx-auto mt-6 max-w-xl text-base leading-relaxed text-[color:var(--taupe)] sm:text-lg"
+          className="fade-up mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[color:var(--taupe)] sm:text-xl"
           style={{ animationDelay: "0.7s" }}
         >
           {siteConfig.heroSubtext}
@@ -122,7 +122,7 @@ function Landing() {
         <div className="mx-auto max-w-2xl text-center">
           <IslamicStar className="mb-10" />
           <h2 className="font-serif text-3xl sm:text-4xl">Be the first to know.</h2>
-          <p className="mx-auto mt-4 max-w-lg text-[color:var(--taupe)]">
+          <p className="mx-auto mt-4 max-w-lg text-lg text-[color:var(--taupe)]">
             Sign up to be notified when we launch — and receive early access.
           </p>
           <div className="mt-10">
@@ -146,10 +146,10 @@ function Landing() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <h3 className="tracked-tight text-xs text-[color:var(--cocoa)]">
+                <h3 className="tracked-tight text-sm text-[color:var(--cocoa)]">
                   {point.title}
                 </h3>
-                <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-[color:var(--taupe)]">
+                <p className="mx-auto mt-4 max-w-xs text-base leading-relaxed text-[color:var(--taupe)]">
                   {point.body}
                 </p>
               </div>
@@ -162,11 +162,11 @@ function Landing() {
       <section id="wholesale" className="px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <IslamicStar className="mb-10" />
-          <p className="tracked text-[11px] text-[color:var(--gold)]">For Umrah Agencies</p>
+          <p className="tracked text-sm text-[color:var(--gold)]">For Umrah Agencies</p>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl">
             Elevate your travelers' journey.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-[color:var(--taupe)]">
+          <p className="mx-auto mt-4 max-w-xl text-lg text-[color:var(--taupe)]">
             Offer your travelers a premium, branded kit. Wholesale and white-label
             options available at launch.
           </p>
@@ -193,7 +193,7 @@ function Landing() {
           <div className="flex items-center gap-6 text-[color:var(--taupe)]">
             <a
               href={`mailto:${email}`}
-              className="text-sm transition-colors hover:text-[color:var(--gold)]"
+              className="text-base transition-colors hover:text-[color:var(--gold)]"
             >
               {email}
             </a>
@@ -212,7 +212,7 @@ function Landing() {
               </svg>
             </a>
           </div>
-          <p className="tracked-tight mt-4 text-[10px] text-[color:var(--taupe)]/70">
+          <p className="tracked-tight mt-4 text-xs text-[color:var(--taupe)]/70">
             © {new Date().getFullYear()} Menasik. All rights reserved.
           </p>
         </div>

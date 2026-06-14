@@ -103,6 +103,20 @@ function Landing() {
         </div>
       </section>
 
+      {/* ============== PRODUCT SHOWCASE ============== */}
+      <section className="px-6 py-16 sm:py-24">
+        <div className="mx-auto max-w-5xl">
+          <img
+            src={kitImage}
+            alt="Menasik premium Umrah kit — beautifully curated essentials for your sacred journey"
+            width={1200}
+            height={1200}
+            loading="lazy"
+            className="w-full rounded-xl object-cover shadow-[0_20px_60px_-20px_oklch(0.30_0.035_55/0.15)]"
+          />
+        </div>
+      </section>
+
       {/* ============== WAITLIST ============== */}
       <section id="waitlist" className="px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">

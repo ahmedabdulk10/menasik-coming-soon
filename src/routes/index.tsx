@@ -67,7 +67,7 @@ function Landing() {
             alt="Menasik — مناسك"
             width={560}
             height={400}
-            className="mx-auto h-44 w-auto select-none object-contain mix-blend-multiply sm:h-56 md:h-64"
+            className="mx-auto h-44 w-auto select-none object-contain sm:h-56 md:h-64"
           />
         </div>
 
@@ -169,7 +169,7 @@ function Landing() {
             width={160}
             height={120}
             loading="lazy"
-            className="h-16 w-auto object-contain opacity-90 mix-blend-multiply"
+            className="h-16 w-auto object-contain opacity-90"
           />
           <p className="font-serif text-lg italic text-[color:var(--cocoa)]">
             Menasik — Pack Less. Worship More.

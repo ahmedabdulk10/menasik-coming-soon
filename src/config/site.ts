@@ -16,11 +16,11 @@ export const siteConfig = {
   // ---------- Copy ----------
   tagline: "Pack Less. Worship More.",
   heroSubtext:
-    "Premium, Shariah-compliant Umrah kits — thoughtfully curated so you can focus on your journey.",
+    "Premium Umrah kits — thoughtfully curated so you can focus on your journey.",
 
   teaserPoints: [
     {
-      title: "Shariah-Compliant",
+      title: "Ihram-Appropriate",
       body: "Every item ihram-appropriate and fragrance-free.",
     },
     {

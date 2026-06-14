@@ -14,13 +14,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Menasik — premium, Shariah-compliant Umrah kits. Thoughtfully curated so you can focus on your journey. Join the waitlist.",
+          "Menasik — premium Umrah kits. Thoughtfully curated so you can focus on your journey. Join the waitlist.",
       },
       { property: "og:title", content: "Menasik — Coming Soon | Premium Umrah Kits" },
       {
         property: "og:description",
         content:
-          "Premium, Shariah-compliant Umrah kits. Pack Less. Worship More.",
+          "Premium Umrah kits. Pack Less. Worship More.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:title", content: "Menasik — Coming Soon" },
       {
         name: "twitter:description",
-        content: "Premium, Shariah-compliant Umrah kits. Pack Less. Worship More.",
+        content: "Premium Umrah kits. Pack Less. Worship More.",
       },
       { name: "theme-color", content: "#F2EBDD" },
     ],

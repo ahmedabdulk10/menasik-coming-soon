@@ -166,10 +166,10 @@ function Landing() {
           <img
             src={logo}
             alt="Menasik"
-            width={64}
-            height={64}
+            width={160}
+            height={120}
             loading="lazy"
-            className="h-16 w-16 object-contain opacity-90"
+            className="h-16 w-auto object-contain opacity-90 mix-blend-multiply"
           />
           <p className="font-serif text-lg italic text-[color:var(--cocoa)]">
             Menasik — Pack Less. Worship More.

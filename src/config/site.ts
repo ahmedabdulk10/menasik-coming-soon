@@ -5,8 +5,8 @@
 
 export const siteConfig = {
   // ---------- Integration keys (replace these strings) ----------
-  MAILERLITE_API_KEY: "{{MAILERLITE_API_KEY}}",
-  MAILERLITE_GROUP_ID: "{{MAILERLITE_GROUP_ID}}",
+  // MailerLite keys live server-side only (set MAILERLITE_API_KEY and
+  // MAILERLITE_GROUP_ID as secrets) and are used by the waitlist server fn.
   WEB3FORMS_ACCESS_KEY: "{{WEB3FORMS_ACCESS_KEY}}",
 
   // ---------- Contact / social ----------

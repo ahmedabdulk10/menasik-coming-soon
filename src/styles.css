@@ -50,13 +50,13 @@
 :root {
   --radius: 0.5rem;
 
-  /* Brand palette (oklch equivalents of the warm hex values) */
-  --cream: oklch(0.935 0.022 84);       /* #F2EBDD */
-  --sand:  oklch(0.918 0.025 82);       /* #EDE4D3 */
-  --taupe: oklch(0.585 0.028 65);       /* #8A7B66 */
-  --cocoa: oklch(0.405 0.028 60);       /* #5C4F3D */
-  --gold:  oklch(0.705 0.075 75);       /* #B89B6E */
-  --gold-soft: oklch(0.82 0.05 80);
+  /* Brand palette — richer contrast, more distinct warm tones */
+  --cream: oklch(0.94 0.018 85);
+  --sand:  oklch(0.82 0.025 82);
+  --taupe: oklch(0.50 0.03 65);
+  --cocoa: oklch(0.30 0.035 55);
+  --gold:  oklch(0.73 0.11 75);
+  --gold-soft: oklch(0.80 0.06 75);
 
   /* shadcn semantic mapping */
   --background: var(--cream);
@@ -75,8 +75,8 @@
   --accent-foreground: oklch(0.98 0.01 80);
   --destructive: oklch(0.55 0.18 25);
   --destructive-foreground: oklch(0.98 0.01 80);
-  --border: oklch(0.82 0.025 75);
-  --input: oklch(0.82 0.025 75);
+  --border: oklch(0.78 0.03 75);
+  --input: oklch(0.78 0.03 75);
   --ring: var(--gold);
 }
 

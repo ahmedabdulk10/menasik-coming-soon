@@ -50,13 +50,13 @@ export function WaitlistForm() {
         <button
           type="submit"
           disabled={state === "loading"}
-          className="tracked-tight rounded-none border border-[color:var(--gold)] bg-[color:var(--gold)] px-8 py-3 text-xs text-[color:var(--cream)] transition-all hover:bg-transparent hover:text-[color:var(--cocoa)] disabled:opacity-60"
+          className="tracked-tight rounded-none border border-[color:var(--gold)] bg-[color:var(--gold)] px-8 py-3 text-sm text-[color:var(--cream)] transition-all hover:bg-transparent hover:text-[color:var(--cocoa)] disabled:opacity-60"
         >
           {state === "loading" ? "Sending…" : "Notify Me"}
         </button>
       </div>
       {error && (
-        <p className="mt-3 text-center text-sm text-[color:var(--taupe)]">{error}</p>
+        <p className="mt-3 text-center text-base text-[color:var(--taupe)]">{error}</p>
       )}
     </form>
   );

@@ -1,11 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/menasik-logo.asset.json";
+import kitAsset from "@/assets/menasik-kit.asset.json";
 import { siteConfig, isConfigured } from "@/config/site";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WholesaleForm } from "@/components/WholesaleForm";
 import { IslamicStar, ArchMotif, PalmShadow } from "@/components/IslamicStar";
 
 const logo = logoAsset.url;
+const kitImage = kitAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({

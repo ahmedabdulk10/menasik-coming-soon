@@ -10,7 +10,7 @@ export const siteConfig = {
   WEB3FORMS_ACCESS_KEY: "{{WEB3FORMS_ACCESS_KEY}}",
 
   // ---------- Contact / social ----------
-  CONTACT_EMAIL: "{{CONTACT_EMAIL}}",
+  CONTACT_EMAIL: "info@menasik.co",
   INSTAGRAM_URL: "{{INSTAGRAM_URL}}",
 
   // ---------- Copy ----------

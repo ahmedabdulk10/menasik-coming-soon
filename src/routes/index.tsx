@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
 
 function Landing() {
   const instagram = isConfigured(siteConfig.INSTAGRAM_URL) ? siteConfig.INSTAGRAM_URL : "#";
-  const email = isConfigured(siteConfig.CONTACT_EMAIL) ? siteConfig.CONTACT_EMAIL : "hello@menasik.com";
+  const email = siteConfig.CONTACT_EMAIL;
 
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[color:var(--cream)]">

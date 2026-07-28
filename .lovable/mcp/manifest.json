@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "sdk_version": "0.24.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "menasik-mcp",
+      "version": "0.1.0",
+      "title": "Menasik MCP"
+    },
+    "tools": [
+      {
+        "name": "subscribe_waitlist",
+        "title": "Join Menasik waitlist",
+        "description": "Subscribe an email address to the Menasik launch waitlist. Same submission as the public sign-up form on menasik.co.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "maxLength": 254,
+              "format": "email",
+              "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$",
+              "description": "Email address to add to the waitlist."
+            }
+          },
+          "required": [
+            "email"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_brand_info",
+        "title": "Get Menasik brand info",
+        "description": "Return public brand info for Menasik: tagline, description, contact email, and launch status.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

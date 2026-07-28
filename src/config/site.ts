@@ -24,8 +24,8 @@ export const siteConfig = {
       body: "Every item ihram-appropriate and fragrance-free.",
     },
     {
-      title: "TSA-Ready & Carry-On Sized",
-      body: "Everything compliant, packed to fly.",
+      title: "Carry-On Conscious",
+      body: "Travel-sized where applicable and thoughtfully packed.",
     },
     {
       title: "Thoughtfully Curated",

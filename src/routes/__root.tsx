@@ -10,7 +10,11 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import logoAsset from "../assets/menasik-logo.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "../components/SiteHeader";
+
+const logo = logoAsset.url;
 
 function NotFoundComponent() {
   return (
@@ -80,18 +84,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Menasik" },
       { property: "og:site_name", content: "Menasik" },
       { property: "og:type", content: "website" },
-      { title: "menasik - Pack Less. Worship More." },
-      { property: "og:title", content: "menasik - Pack Less. Worship More." },
-      { name: "twitter:title", content: "menasik - Pack Less. Worship More." },
-      { name: "description", content: "Menasik Launchpad announces a premium Umrah kit brand, capturing waitlist signups and agency inquiries." },
-      { property: "og:description", content: "Menasik Launchpad announces a premium Umrah kit brand, capturing waitlist signups and agency inquiries." },
-      { name: "twitter:description", content: "Menasik Launchpad announces a premium Umrah kit brand, capturing waitlist signups and agency inquiries." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ee2cfe38-8a69-45db-942c-58edbe858484/id-preview-70748fee--5f2d848c-927a-4cfb-bc06-c84b3454a5f5.lovable.app-1781460945380.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ee2cfe38-8a69-45db-942c-58edbe858484/id-preview-70748fee--5f2d848c-927a-4cfb-bc06-c84b3454a5f5.lovable.app-1781460945380.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "theme-color", content: "#F2EBDD" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: logo },
+      { rel: "apple-touch-icon", href: logo },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,6 +124,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <SiteHeader />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

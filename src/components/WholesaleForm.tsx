@@ -22,8 +22,8 @@ export function WholesaleForm() {
 
     try {
       fd.append("access_key", key);
-      fd.append("subject", "Menasik — Wholesale Inquiry");
-      fd.append("from_name", "Menasik Wholesale");
+      fd.append("subject", "Menasik — Group Inquiry");
+      fd.append("from_name", "Menasik Group Inquiry");
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: fd,
@@ -55,8 +55,8 @@ export function WholesaleForm() {
     <form onSubmit={onSubmit} className="mx-auto w-full max-w-xl space-y-6">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <label className={labelCls} htmlFor="agency">Agency Name</label>
-          <input id="agency" name="agency_name" required className={fieldCls} placeholder="Your agency" />
+          <label className={labelCls} htmlFor="organization">Organization Name</label>
+          <input id="organization" name="organization_name" required className={fieldCls} placeholder="Your organization" />
         </div>
         <div>
           <label className={labelCls} htmlFor="contact">Contact Name</label>
@@ -64,11 +64,19 @@ export function WholesaleForm() {
         </div>
         <div>
           <label className={labelCls} htmlFor="wemail">Email</label>
-          <input id="wemail" name="email" type="email" required className={fieldCls} placeholder="you@agency.com" />
+          <input id="wemail" name="email" type="email" required className={fieldCls} placeholder="you@organization.com" />
         </div>
         <div>
-          <label className={labelCls} htmlFor="qty">Estimated Quantity</label>
-          <input id="qty" name="estimated_quantity" className={fieldCls} placeholder="e.g. 250 kits / year" />
+          <label className={labelCls} htmlFor="phone">Phone Number</label>
+          <input id="phone" name="phone_number" className={fieldCls} placeholder="Optional" />
+        </div>
+        <div>
+          <label className={labelCls} htmlFor="qty">Estimated Group Size</label>
+          <input id="qty" name="estimated_group_size" className={fieldCls} placeholder="e.g. 40 pilgrims" />
+        </div>
+        <div>
+          <label className={labelCls} htmlFor="travel">Expected Travel Date</label>
+          <input id="travel" name="expected_travel_date" className={fieldCls} placeholder="e.g. Ramadan 1447" />
         </div>
       </div>
       <div>
@@ -81,7 +89,7 @@ export function WholesaleForm() {
           disabled={state === "loading"}
           className="tracked-tight rounded-none border border-[color:var(--cocoa)] bg-transparent px-10 py-3 text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)] disabled:opacity-60"
         >
-          {state === "loading" ? "Sending…" : "Request Early Access"}
+          {state === "loading" ? "Sending…" : "Contact Menasik"}
         </button>
       </div>
       {error && (

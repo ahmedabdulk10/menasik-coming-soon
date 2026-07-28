@@ -1,10 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/menasik-logo.asset.json";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import kitAsset from "@/assets/menasik-kit.asset.json";
-import { siteConfig, isConfigured } from "@/config/site";
+import { siteConfig } from "@/config/site";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WholesaleForm } from "@/components/WholesaleForm";
 import { IslamicStar, ArchMotif, PalmShadow } from "@/components/IslamicStar";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { SiteFooter } from "@/components/SiteFooter";
+import { kitWithoutIhram, kitWithIhram } from "@/config/products";
+import logoAsset from "@/assets/menasik-logo.asset.json";
 
 const logo = logoAsset.url;
 const kitImage = kitAsset.url;
@@ -21,46 +24,28 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Menasik — Coming Soon | Premium Umrah Kits" },
       {
         property: "og:description",
-        content:
-          "Premium Umrah kits. Pack Less. Worship More.",
+        content: "Premium Umrah kits. Pack Less. Worship More.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Menasik — Coming Soon" },
       {
         name: "twitter:description",
         content: "Premium Umrah kits. Pack Less. Worship More.",
       },
-      { name: "theme-color", content: "#F2EBDD" },
     ],
-    links: [
-      { rel: "canonical", href: "/" },
-      { rel: "icon", type: "image/png", href: logo },
-      { rel: "apple-touch-icon", href: logo },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap",
-      },
-    ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Landing,
 });
 
 function Landing() {
-  const instagram = isConfigured(siteConfig.INSTAGRAM_URL) ? siteConfig.INSTAGRAM_URL : "#";
-  const email = siteConfig.CONTACT_EMAIL;
-
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[color:var(--cream)]">
-      {/* whisper-light arch motif backdrop */}
       <ArchMotif className="pointer-events-none absolute -top-20 left-1/2 -z-10 h-[120vh] w-[80vw] -translate-x-1/2 text-[color:var(--gold)] opacity-[0.06]" />
 
       {/* ============== HERO ============== */}
-      <section className="sacred-backdrop relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6 py-20 text-center">
-        {/* warm palm-frond shadow overlay (top-left, like sunlight through leaves) */}
+      <section className="sacred-backdrop relative flex min-h-[90svh] flex-col items-center justify-center overflow-hidden px-6 py-20 text-center">
         <PalmShadow className="pointer-events-none absolute -left-24 -top-20 h-[70vh] w-[70vh] text-[color:var(--cocoa)] opacity-[0.07] md:-left-10" />
 
         <div className="fade-in relative" style={{ animationDelay: "0.05s" }}>
@@ -73,10 +58,7 @@ function Landing() {
           />
         </div>
 
-        <p
-          className="tracked fade-up mt-10 text-sm text-[color:var(--taupe)]"
-          style={{ animationDelay: "0.35s" }}
-        >
+        <p className="tracked fade-up mt-10 text-sm text-[color:var(--taupe)]" style={{ animationDelay: "0.35s" }}>
           Coming Soon
         </p>
 
@@ -94,11 +76,7 @@ function Landing() {
           {siteConfig.heroSubtext}
         </p>
 
-        <div
-          className="fade-up mt-16 text-[color:var(--gold)]"
-          style={{ animationDelay: "1s" }}
-          aria-hidden="true"
-        >
+        <div className="fade-up mt-16 text-[color:var(--gold)]" style={{ animationDelay: "1s" }} aria-hidden="true">
           <div className="mx-auto h-12 w-px bg-gradient-to-b from-transparent to-[color:var(--gold-soft)]" />
         </div>
       </section>
@@ -114,6 +92,73 @@ function Landing() {
             loading="lazy"
             className="w-full rounded-xl object-cover shadow-[0_20px_60px_-20px_oklch(0.30_0.035_55/0.15)]"
           />
+        </div>
+      </section>
+
+      {/* ============== TWO KITS ============== */}
+      <section className="px-6 py-24 sm:py-32">
+        <div className="mx-auto max-w-6xl">
+          <IslamicStar className="mb-12" />
+          <h2 className="text-center font-serif text-3xl sm:text-4xl">Choose your kit</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-[color:var(--taupe)]">
+            Two thoughtfully composed kits — pick the one that fits your journey.
+          </p>
+
+          <div className="mt-16 grid gap-10 md:grid-cols-2">
+            {/* Kit Without Ihram */}
+            <article className="flex flex-col rounded-xl border border-[color:var(--gold-soft)]/40 bg-[color:var(--cream)] p-6 sm:p-8">
+              <ImagePlaceholder label="[PLACEHOLDER: KIT WITHOUT IHRAM PHOTO]" aspect="4/3" />
+              <div className="mt-6 flex-1">
+                <h3 className="font-serif text-2xl text-[color:var(--cocoa)] sm:text-3xl">
+                  {kitWithoutIhram.name}
+                </h3>
+                <p className="tracked-tight mt-2 text-sm text-[color:var(--gold)]">
+                  {kitWithoutIhram.price}
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-[color:var(--taupe)]">
+                  Includes the full set of Menasik worship, personal care, travel, and organization
+                  essentials. Made for travelers who already have their ihram — an ihram is not
+                  included in this kit.
+                </p>
+              </div>
+              <div className="mt-8">
+                <Link
+                  to="/kit-without-ihram"
+                  className="tracked-tight inline-block rounded-none border border-[color:var(--cocoa)] px-8 py-3 text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)]"
+                >
+                  View Kit
+                </Link>
+              </div>
+            </article>
+
+            {/* Kit With Ihram */}
+            <article className="relative flex flex-col rounded-xl border border-[color:var(--gold)]/60 bg-[color:var(--cream)] p-6 sm:p-8">
+              <span className="tracked-tight absolute -top-3 left-6 bg-[color:var(--cream)] px-3 text-xs text-[color:var(--gold)]">
+                Complete Kit
+              </span>
+              <ImagePlaceholder label="[PLACEHOLDER: KIT WITH IHRAM PHOTO]" aspect="4/3" />
+              <div className="mt-6 flex-1">
+                <h3 className="font-serif text-2xl text-[color:var(--cocoa)] sm:text-3xl">
+                  {kitWithIhram.name}
+                </h3>
+                <p className="tracked-tight mt-2 text-sm text-[color:var(--gold)]">
+                  {kitWithIhram.price}
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-[color:var(--taupe)]">
+                  Includes every item in the Kit Without Ihram, plus a plain white two-piece ihram.
+                  Made for travelers who want their preparation complete in one box.
+                </p>
+              </div>
+              <div className="mt-8">
+                <Link
+                  to="/kit-with-ihram"
+                  className="tracked-tight inline-block rounded-none border border-[color:var(--gold)] bg-[color:var(--gold)] px-8 py-3 text-sm text-[color:var(--cream)] transition-all hover:bg-transparent hover:text-[color:var(--cocoa)]"
+                >
+                  View Kit
+                </Link>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -135,9 +180,7 @@ function Landing() {
       <section className="bg-[color:var(--sand)]/60 px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-5xl">
           <IslamicStar className="mb-12" />
-          <h2 className="text-center font-serif text-3xl sm:text-4xl">
-            What's coming
-          </h2>
+          <h2 className="text-center font-serif text-3xl sm:text-4xl">What's coming</h2>
           <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8">
             {siteConfig.teaserPoints.map((point, i) => (
               <div key={i} className="text-center">
@@ -146,9 +189,7 @@ function Landing() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <h3 className="tracked-tight text-sm text-[color:var(--cocoa)]">
-                  {point.title}
-                </h3>
+                <h3 className="tracked-tight text-sm text-[color:var(--cocoa)]">{point.title}</h3>
                 <p className="mx-auto mt-4 max-w-xs text-base leading-relaxed text-[color:var(--taupe)]">
                   {point.body}
                 </p>
@@ -158,17 +199,20 @@ function Landing() {
         </div>
       </section>
 
-      {/* ============== WHOLESALE ============== */}
+      {/* ============== GROUP INQUIRY ============== */}
       <section id="wholesale" className="px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-3xl text-center">
           <IslamicStar className="mb-10" />
-          <p className="tracked text-sm text-[color:var(--gold)]">For Umrah Agencies</p>
+          <p className="tracked text-sm text-[color:var(--gold)]">
+            For Agencies, Mosques &amp; Organizers
+          </p>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl">
-            Elevate your travelers' journey.
+            Planning Umrah or Hajj for a Group?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-[color:var(--taupe)]">
-            Offer your travelers a premium, branded kit. Wholesale and white-label
-            options available at launch.
+            Menasik welcomes inquiries from Umrah and Hajj travel companies, mosques, group
+            leaders, and Islamic organizations interested in providing thoughtfully curated travel
+            essentials to their pilgrims.
           </p>
           <div className="mt-14">
             <WholesaleForm />
@@ -176,47 +220,7 @@ function Landing() {
         </div>
       </section>
 
-      {/* ============== FOOTER ============== */}
-      <footer className="border-t border-[color:var(--gold-soft)]/40 bg-[color:var(--sand)]/40 px-6 py-16">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
-          <img
-            src={logo}
-            alt="Menasik"
-            width={160}
-            height={120}
-            loading="lazy"
-            className="h-16 w-auto object-contain opacity-90"
-          />
-          <p className="font-serif text-lg italic text-[color:var(--cocoa)]">
-            Menasik — Pack Less. Worship More.
-          </p>
-          <div className="flex items-center gap-6 text-[color:var(--taupe)]">
-            <a
-              href={`mailto:${email}`}
-              className="text-base transition-colors hover:text-[color:var(--gold)]"
-            >
-              {email}
-            </a>
-            <span className="h-1 w-1 rounded-full bg-[color:var(--gold-soft)]" />
-            <a
-              href={instagram}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-              className="transition-colors hover:text-[color:var(--gold)]"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
-              </svg>
-            </a>
-          </div>
-          <p className="tracked-tight mt-4 text-xs text-[color:var(--taupe)]/70">
-            © {new Date().getFullYear()} Menasik. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

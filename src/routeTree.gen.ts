@@ -10,6 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as KitWithoutIhramRouteImport } from './routes/kit-without-ihram'
+import { Route as KitWithIhramRouteImport } from './routes/kit-with-ihram'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -18,6 +20,16 @@ import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KitWithoutIhramRoute = KitWithoutIhramRouteImport.update({
+  id: '/kit-without-ihram',
+  path: '/kit-without-ihram',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KitWithIhramRoute = KitWithIhramRouteImport.update({
+  id: '/kit-with-ihram',
+  path: '/kit-with-ihram',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -46,6 +58,8 @@ const Char91DotmcpChar93InvokeToolToolRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kit-with-ihram': typeof KitWithIhramRoute
+  '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -53,6 +67,8 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kit-with-ihram': typeof KitWithIhramRoute
+  '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -61,6 +77,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kit-with-ihram': typeof KitWithIhramRoute
+  '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -70,6 +88,8 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/kit-with-ihram'
+    | '/kit-without-ihram'
     | '/mcp'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -77,6 +97,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/kit-with-ihram'
+    | '/kit-without-ihram'
     | '/mcp'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -84,6 +106,8 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/kit-with-ihram'
+    | '/kit-without-ihram'
     | '/mcp'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -92,6 +116,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KitWithIhramRoute: typeof KitWithIhramRoute
+  KitWithoutIhramRoute: typeof KitWithoutIhramRoute
   McpRoute: typeof McpRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -105,6 +131,20 @@ declare module '@tanstack/react-router' {
       path: '/mcp'
       fullPath: '/mcp'
       preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kit-without-ihram': {
+      id: '/kit-without-ihram'
+      path: '/kit-without-ihram'
+      fullPath: '/kit-without-ihram'
+      preLoaderRoute: typeof KitWithoutIhramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kit-with-ihram': {
+      id: '/kit-with-ihram'
+      path: '/kit-with-ihram'
+      fullPath: '/kit-with-ihram'
+      preLoaderRoute: typeof KitWithIhramRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -140,6 +180,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KitWithIhramRoute: KitWithIhramRoute,
+  KitWithoutIhramRoute: KitWithoutIhramRoute,
   McpRoute: McpRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:

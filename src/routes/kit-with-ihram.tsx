@@ -5,6 +5,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { SiteFooter } from "@/components/SiteFooter";
 import { KitCategoryList } from "@/components/KitCategoryList";
 import { kitWithIhram } from "@/config/products";
+import kitWithIhramImage from "@/assets/menasik-kit-with-ihram.png.asset.json";
 
 export const Route = createFileRoute("/kit-with-ihram")({
   head: () => ({

@@ -3,13 +3,17 @@
   "sdk_version": "0.24.0",
   "path": "/mcp",
   "auth": {
-    "type": "none"
+    "type": "oauth",
+    "issuer": "https://haadulwtcemjnlnmente.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
   },
   "mcp": {
     "server": {
-      "name": "menasik-mcp",
+      "name": "menasik-launchpad",
       "version": "0.1.0",
-      "title": "Menasik MCP"
+      "title": "Menasik Launchpad"
     },
     "tools": [
       {

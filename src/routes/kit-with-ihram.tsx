@@ -68,7 +68,7 @@ function KitWithIhramPage() {
       {/* Ihram spotlight — prominent, high on the page */}
       <section className="bg-[color:var(--sand)]/50 px-6 py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
-          <ImagePlaceholder label="[PLACEHOLDER: PLAIN WHITE IHRAM PHOTO]" aspect="4/5" />
+          <ImagePlaceholder label="PLAIN WHITE IHRAM PHOTO" aspect="4/5" />
           <div>
             <p className="tracked text-sm text-[color:var(--gold)]">The Ihram</p>
             <h2 className="mt-4 font-serif text-3xl italic text-[color:var(--cocoa)] sm:text-4xl">
@@ -111,37 +111,37 @@ function KitWithIhramPage() {
           <h2 className="text-center font-serif text-3xl sm:text-4xl">Considered essentials</h2>
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Spotlight
-              label="[PLACEHOLDER: PREMIUM PRAYER MAT PHOTO]"
+              label="PREMIUM PRAYER MAT PHOTO"
               title="Premium Prayer Mat"
               body="A refined mat for salah wherever the journey takes you."
             />
             <Spotlight
-              label="[PLACEHOLDER: PREMIUM BAG PHOTO]"
+              label="PREMIUM BAG PHOTO"
               title="Premium Bag"
               body="A quiet, well-made carry that holds the kit and travels with you."
             />
             <Spotlight
-              label="[PLACEHOLDER: PERSONAL-CARE PRODUCTS PHOTO]"
+              label="PERSONAL-CARE PRODUCTS PHOTO"
               title="Personal Care Collection"
               body="Fragrance-free essentials selected for ihram."
             />
             <Spotlight
-              label="[PLACEHOLDER: DUA BOOK AND UMRAH GUIDE PHOTO]"
+              label="DUA BOOK AND UMRAH GUIDE PHOTO"
               title="Dua Book & Umrah Guide"
               body="A curated pair — duas for every stage, and the rites, step by step."
             />
             <Spotlight
-              label="[PLACEHOLDER: DIGITAL TASBIH RING PHOTO]"
+              label="DIGITAL TASBIH RING PHOTO"
               title="Digital Tasbih Ring"
               body="A discreet ring for counting dhikr — no beads to fumble with."
             />
             <Spotlight
-              label="[PLACEHOLDER: USB-C ADAPTER PHOTO]"
+              label="USB-C ADAPTER PHOTO"
               title="USB-C Plug Adapter"
               body="A compact adapter for keeping devices ready on the go."
             />
             <Spotlight
-              label="[PLACEHOLDER: BRANDED MENASIK BOX PHOTO]"
+              label="BRANDED MENASIK BOX PHOTO"
               title="Branded Menasik Box"
               body="A considered box that holds and presents the kit as one."
             />
@@ -152,7 +152,7 @@ function KitWithIhramPage() {
       {/* Box & bag section */}
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
-          <ImagePlaceholder label="[PLACEHOLDER: KIT ARRANGED INSIDE MENASIK BOX]" aspect="4/3" />
+          <ImagePlaceholder label="KIT ARRANGED INSIDE MENASIK BOX" aspect="4/3" />
           <div>
             <p className="tracked text-sm text-[color:var(--gold)]">Organized for travel</p>
             <h2 className="mt-4 font-serif text-3xl italic text-[color:var(--cocoa)] sm:text-4xl">

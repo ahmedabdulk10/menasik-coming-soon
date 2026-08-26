@@ -2,7 +2,6 @@
 // MENASIK — Product Data (single source of truth)
 // ============================================================
 
-
 export type KitItem = {
   name: string;
   description: string;
@@ -56,7 +55,6 @@ export const ihramItem: KitItem = {
 export type Product = {
   slug: string;
   name: string;
-  price: string;
   summary: string;
   route: string;
   categories: KitCategory[];
@@ -66,7 +64,6 @@ export type Product = {
 export const kitWithoutIhram: Product = {
   slug: "kit-without-ihram",
   name: "Kit Without Ihram",
-  price: PRICE_KIT_WITHOUT_IHRAM,
   summary:
     "The full set of Menasik worship, personal care, travel, and organization essentials. Made for travelers who already have their ihram.",
   route: "/kit-without-ihram",
@@ -76,7 +73,6 @@ export const kitWithoutIhram: Product = {
 export const kitWithIhram: Product = {
   slug: "kit-with-ihram",
   name: "Kit With Ihram",
-  price: PRICE_KIT_WITH_IHRAM,
   summary:
     "Everything in the Kit Without Ihram, plus a plain white two-piece ihram. Made for travelers who want their preparation complete in one box.",
   route: "/kit-with-ihram",

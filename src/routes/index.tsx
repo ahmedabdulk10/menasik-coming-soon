@@ -119,9 +119,6 @@ function Landing() {
                 <h3 className="font-serif text-2xl text-[color:var(--cocoa)] sm:text-3xl">
                   {kitWithoutIhram.name}
                 </h3>
-                <p className="tracked-tight mt-2 text-sm text-[color:var(--gold)]">
-                  {kitWithoutIhram.price}
-                </p>
                 <p className="mt-4 text-base leading-relaxed text-[color:var(--taupe)]">
                   Includes the full set of Menasik worship, personal care, travel, and organization
                   essentials. Made for travelers who already have their ihram — an ihram is not
@@ -153,9 +150,6 @@ function Landing() {
                 <h3 className="font-serif text-2xl text-[color:var(--cocoa)] sm:text-3xl">
                   {kitWithIhram.name}
                 </h3>
-                <p className="tracked-tight mt-2 text-sm text-[color:var(--gold)]">
-                  {kitWithIhram.price}
-                </p>
                 <p className="mt-4 text-base leading-relaxed text-[color:var(--taupe)]">
                   Includes every item in the Kit Without Ihram, plus a plain white two-piece ihram.
                   Made for travelers who want their preparation complete in one box.

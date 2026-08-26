@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import kitAsset from "@/assets/menasik-kit.asset.json";
+import kitWithIhramImage from "@/assets/menasik-kit-with-ihram.png.asset.json";
+import kitWithoutIhramImage from "@/assets/menasik-kit-without-ihram.png.asset.json";
 import { siteConfig } from "@/config/site";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WholesaleForm } from "@/components/WholesaleForm";
 import { IslamicStar, ArchMotif, PalmShadow } from "@/components/IslamicStar";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { SiteFooter } from "@/components/SiteFooter";
 import { kitWithoutIhram, kitWithIhram } from "@/config/products";
 import logoAsset from "@/assets/menasik-logo.asset.json";
@@ -33,6 +34,7 @@ export const Route = createFileRoute("/")({
         name: "twitter:description",
         content: "Premium Umrah kits. Pack Less. Worship More.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -107,7 +109,12 @@ function Landing() {
           <div className="mt-16 grid gap-10 md:grid-cols-2">
             {/* Kit Without Ihram */}
             <article className="flex flex-col rounded-xl border border-[color:var(--gold-soft)]/40 bg-[color:var(--cream)] p-6 sm:p-8">
-              <ImagePlaceholder label="[PLACEHOLDER: KIT WITHOUT IHRAM PHOTO]" aspect="4/3" />
+              <img
+                src={kitWithoutIhramImage.url}
+                alt="Menasik Kit Without Ihram in its branded presentation box"
+                loading="lazy"
+                className="aspect-[4/3] w-full rounded-xl border border-[color:var(--gold-soft)]/60 object-cover"
+              />
               <div className="mt-6 flex-1">
                 <h3 className="font-serif text-2xl text-[color:var(--cocoa)] sm:text-3xl">
                   {kitWithoutIhram.name}
@@ -136,7 +143,12 @@ function Landing() {
               <span className="tracked-tight absolute -top-3 left-6 bg-[color:var(--cream)] px-3 text-xs text-[color:var(--gold)]">
                 Complete Kit
               </span>
-              <ImagePlaceholder label="[PLACEHOLDER: KIT WITH IHRAM PHOTO]" aspect="4/3" />
+              <img
+                src={kitWithIhramImage.url}
+                alt="Menasik Kit With Ihram beside folded white ihram cloth"
+                loading="lazy"
+                className="aspect-[4/3] w-full rounded-xl border border-[color:var(--gold-soft)]/60 object-cover"
+              />
               <div className="mt-6 flex-1">
                 <h3 className="font-serif text-2xl text-[color:var(--cocoa)] sm:text-3xl">
                   {kitWithIhram.name}

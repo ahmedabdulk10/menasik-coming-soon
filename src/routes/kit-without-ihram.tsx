@@ -57,7 +57,12 @@ function KitWithoutIhramPage() {
       {/* Hero image */}
       <section className="px-6 pb-16">
         <div className="mx-auto max-w-5xl">
-          <ImagePlaceholder label="[PLACEHOLDER: KIT WITHOUT IHRAM PHOTO]" aspect="16/10" />
+          <img
+            src={kitWithoutIhramImage.url}
+            alt="The Menasik kit without ihram: a branded box with the complete travel, worship, and personal-care essentials."
+            className="w-full rounded-xl border border-[color:var(--gold-soft)]/60 object-cover"
+            style={{ aspectRatio: "16/10" }}
+          />
         </div>
       </section>
 

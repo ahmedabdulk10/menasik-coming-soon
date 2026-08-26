@@ -57,7 +57,12 @@ function KitWithIhramPage() {
       {/* Hero image */}
       <section className="px-6 pb-16">
         <div className="mx-auto max-w-5xl">
-          <ImagePlaceholder label="[PLACEHOLDER: KIT WITH IHRAM PHOTO]" aspect="16/10" />
+          <img
+            src={kitWithIhramImage.url}
+            alt="The Menasik kit with ihram: a branded box plus a plain white two-piece ihram, ready for Umrah."
+            className="w-full rounded-xl border border-[color:var(--gold-soft)]/60 object-cover"
+            style={{ aspectRatio: "16/10" }}
+          />
         </div>
       </section>
 

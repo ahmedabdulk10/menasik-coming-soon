@@ -67,22 +67,19 @@ function KitWithIhramPage() {
 
       {/* Ihram spotlight — prominent, high on the page */}
       <section className="bg-[color:var(--sand)]/50 px-6 py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
-          <ImagePlaceholder label="PLAIN WHITE IHRAM PHOTO" aspect="4/5" />
-          <div>
-            <p className="tracked text-sm text-[color:var(--gold)]">The Ihram</p>
-            <h2 className="mt-4 font-serif text-3xl italic text-[color:var(--cocoa)] sm:text-4xl">
-              A plain white two-piece ihram.
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-[color:var(--taupe)]">
-              A plain white two-piece men's ihram selected for comfort, coverage, portability, and
-              convenient packing.
-            </p>
-            <p className="mt-6 text-base leading-relaxed text-[color:var(--taupe)]">
-              This kit includes everything in the Kit Without Ihram, plus the ihram — so your
-              preparation is complete in one box.
-            </p>
-          </div>
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="tracked text-sm text-[color:var(--gold)]">The Ihram</p>
+          <h2 className="mt-4 font-serif text-3xl italic text-[color:var(--cocoa)] sm:text-4xl">
+            A plain white two-piece ihram.
+          </h2>
+          <p className="mt-6 text-lg leading-relaxed text-[color:var(--taupe)]">
+            A plain white two-piece men's ihram selected for comfort, coverage, portability, and
+            convenient packing.
+          </p>
+          <p className="mt-6 text-base leading-relaxed text-[color:var(--taupe)]">
+            This kit includes everything in the Kit Without Ihram, plus the ihram — so your
+            preparation is complete in one box.
+          </p>
         </div>
       </section>
 

@@ -46,7 +46,6 @@ function KitWithoutIhramPage() {
           <h1 className="mt-4 font-serif text-4xl italic leading-tight text-[color:var(--cocoa)] sm:text-5xl md:text-6xl">
             {product.name}
           </h1>
-          <p className="tracked-tight mt-4 text-sm text-[color:var(--gold)]">{product.price}</p>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[color:var(--taupe)]">
             {product.summary} Every item is fragrance-free and ihram-appropriate, packed into a
             considered box that's ready to travel.

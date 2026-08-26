@@ -1,10 +1,7 @@
 // ============================================================
 // MENASIK — Product Data (single source of truth)
-// Prices are placeholder tokens. Replace ONLY here.
 // ============================================================
 
-export const PRICE_KIT_WITHOUT_IHRAM = "[PLACEHOLDER: KIT WITHOUT IHRAM PRICE]";
-export const PRICE_KIT_WITH_IHRAM = "[PLACEHOLDER: KIT WITH IHRAM PRICE]";
 
 export type KitItem = {
   name: string;

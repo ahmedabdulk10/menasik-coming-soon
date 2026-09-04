@@ -9,6 +9,7 @@ const logo = logoAsset.url;
 const navLinks = [
   { to: "/kit-without-ihram", label: "Kit Without Ihram" },
   { to: "/kit-with-ihram", label: "Kit With Ihram" },
+  { to: "/interest-list", label: "Interest List" },
 ] as const;
 
 export function SiteHeader() {

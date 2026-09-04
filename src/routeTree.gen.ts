@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as KitWithoutIhramRouteImport } from './routes/kit-without-ihram'
 import { Route as KitWithIhramRouteImport } from './routes/kit-with-ihram'
+import { Route as InterestListRouteImport } from './routes/interest-list'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -31,6 +32,11 @@ const KitWithoutIhramRoute = KitWithoutIhramRouteImport.update({
 const KitWithIhramRoute = KitWithIhramRouteImport.update({
   id: '/kit-with-ihram',
   path: '/kit-with-ihram',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InterestListRoute = InterestListRouteImport.update({
+  id: '/interest-list',
+  path: '/interest-list',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -64,6 +70,7 @@ const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/interest-list': typeof InterestListRoute
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/interest-list': typeof InterestListRoute
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
@@ -85,6 +93,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/interest-list': typeof InterestListRoute
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/interest-list'
     | '/kit-with-ihram'
     | '/kit-without-ihram'
     | '/mcp'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/interest-list'
     | '/kit-with-ihram'
     | '/kit-without-ihram'
     | '/mcp'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/interest-list'
     | '/kit-with-ihram'
     | '/kit-without-ihram'
     | '/mcp'
@@ -128,6 +140,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  InterestListRoute: typeof InterestListRoute
   KitWithIhramRoute: typeof KitWithIhramRoute
   KitWithoutIhramRoute: typeof KitWithoutIhramRoute
   McpRoute: typeof McpRoute
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       path: '/kit-with-ihram'
       fullPath: '/kit-with-ihram'
       preLoaderRoute: typeof KitWithIhramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/interest-list': {
+      id: '/interest-list'
+      path: '/interest-list'
+      fullPath: '/interest-list'
+      preLoaderRoute: typeof InterestListRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -200,6 +220,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  InterestListRoute: InterestListRoute,
   KitWithIhramRoute: KitWithIhramRoute,
   KitWithoutIhramRoute: KitWithoutIhramRoute,
   McpRoute: McpRoute,

@@ -105,7 +105,7 @@ function KitSummary({ name, body, to }: { name: string; body: string; to: string
     >
       <h2 className="font-serif text-xl text-[color:var(--cocoa)] sm:text-2xl">{name}</h2>
       <p className="mt-3 text-base leading-relaxed text-[color:var(--taupe)]">{body}</p>
-uation      <span className="tracked-tight mt-4 inline-block text-xs text-[color:var(--gold)]">View Kit →</span>
+      <span className="tracked-tight mt-4 inline-block text-xs text-[color:var(--gold)]">View Kit →</span>
     </Link>
   );
 }

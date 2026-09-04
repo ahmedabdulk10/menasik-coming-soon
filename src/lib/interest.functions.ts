@@ -14,7 +14,8 @@ export const submitInterest = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
-    const { error } = await supabaseAdmin.from("interest_signups").insert({
+    // Table isn't in the generated Database types yet; insert untyped.
+    const { error } = await (supabaseAdmin.from as any)("interest_signups").insert({
       name: data.name || null,
       email: data.email.toLowerCase(),
       kit_interest: data.kitInterest,

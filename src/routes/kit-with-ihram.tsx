@@ -178,13 +178,3 @@ function KitWithIhramPage() {
     </main>
   );
 }
-
-function Spotlight({ label, title, body }: { label: string; title: string; body: string }) {
-  return (
-    <div>
-      <ImagePlaceholder label={label} aspect="4/3" showStar={false} />
-      <h3 className="mt-5 font-serif text-xl text-[color:var(--cocoa)]">{title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-[color:var(--taupe)]">{body}</p>
-    </div>
-  );
-}

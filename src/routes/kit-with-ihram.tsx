@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { KitCategoryList } from "@/components/KitCategoryList";
 import { CtaBand } from "@/components/CtaBand";
 import { kitWithIhram } from "@/config/products";
+import { isConfigured, siteConfig } from "@/config/site";
 import kitWithIhramImage from "@/assets/menasik-kit-with-ihram.png.asset.json";
 
 const description =

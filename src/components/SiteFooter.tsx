@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/menasik-logo.asset.json";
 import { siteConfig, isConfigured } from "@/config/site";
 

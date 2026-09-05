@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/menasik-logo.asset.json";
 import { siteConfig, isConfigured } from "@/config/site";
 
@@ -42,6 +43,15 @@ export function SiteFooter() {
               <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
             </svg>
           </a>
+        </div>
+        <div className="mt-2 flex items-center justify-center gap-3 text-sm text-[color:var(--taupe)]">
+          <Link to="/refund-policy" className="py-3 transition-colors hover:text-[color:var(--gold)]">
+            Refund Policy
+          </Link>
+          <span className="h-1 w-1 rounded-full bg-[color:var(--gold-soft)]" aria-hidden="true" />
+          <Link to="/terms" className="py-3 transition-colors hover:text-[color:var(--gold)]">
+            Terms of Service
+          </Link>
         </div>
         <p className="tracked-tight mt-4 text-xs text-[color:var(--taupe)]/70">
           © {new Date().getFullYear()} Menasik. All rights reserved.

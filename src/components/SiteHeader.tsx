@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
-import logoAsset from "@/assets/menasik-logo.asset.json";
+import logoAsset from "@/assets/menasik-logo-header.png";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet";
 
-const logo = logoAsset.url;
+const logo = logoAsset;
 
 const navLinks = [
   { to: "/kit-without-ihram", label: "Kit Without Ihram" },
@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-[color:var(--gold-soft)]/30 bg-[color:var(--cream)]/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center" aria-label="Menasik home">
-          <img src={logo} alt="Menasik" width={120} height={44} className="h-9 w-auto object-contain" />
+          <img src={logo} alt="Menasik" width={180} height={66} className="h-12 w-auto object-contain md:h-14" />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">

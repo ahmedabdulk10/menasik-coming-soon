@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const Route = createFileRoute("/terms")({

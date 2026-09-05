@@ -13,6 +13,7 @@ import { Route as McpRouteImport } from './routes/mcp'
 import { Route as KitWithoutIhramRouteImport } from './routes/kit-without-ihram'
 import { Route as KitWithIhramRouteImport } from './routes/kit-with-ihram'
 import { Route as InterestListRouteImport } from './routes/interest-list'
+import { Route as GroupInquiryRouteImport } from './routes/group-inquiry'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -37,6 +38,11 @@ const KitWithIhramRoute = KitWithIhramRouteImport.update({
 const InterestListRoute = InterestListRouteImport.update({
   id: '/interest-list',
   path: '/interest-list',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GroupInquiryRoute = GroupInquiryRouteImport.update({
+  id: '/group-inquiry',
+  path: '/group-inquiry',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -70,6 +76,7 @@ const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/group-inquiry': typeof GroupInquiryRoute
   '/interest-list': typeof InterestListRoute
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
@@ -81,6 +88,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/group-inquiry': typeof GroupInquiryRoute
   '/interest-list': typeof InterestListRoute
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
@@ -93,6 +101,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/group-inquiry': typeof GroupInquiryRoute
   '/interest-list': typeof InterestListRoute
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
@@ -106,6 +115,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/group-inquiry'
     | '/interest-list'
     | '/kit-with-ihram'
     | '/kit-without-ihram'
@@ -117,6 +127,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/group-inquiry'
     | '/interest-list'
     | '/kit-with-ihram'
     | '/kit-without-ihram'
@@ -128,6 +139,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/group-inquiry'
     | '/interest-list'
     | '/kit-with-ihram'
     | '/kit-without-ihram'
@@ -140,6 +152,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GroupInquiryRoute: typeof GroupInquiryRoute
   InterestListRoute: typeof InterestListRoute
   KitWithIhramRoute: typeof KitWithIhramRoute
   KitWithoutIhramRoute: typeof KitWithoutIhramRoute
@@ -178,6 +191,13 @@ declare module '@tanstack/react-router' {
       path: '/interest-list'
       fullPath: '/interest-list'
       preLoaderRoute: typeof InterestListRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/group-inquiry': {
+      id: '/group-inquiry'
+      path: '/group-inquiry'
+      fullPath: '/group-inquiry'
+      preLoaderRoute: typeof GroupInquiryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -220,6 +240,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GroupInquiryRoute: GroupInquiryRoute,
   InterestListRoute: InterestListRoute,
   KitWithIhramRoute: KitWithIhramRoute,
   KitWithoutIhramRoute: KitWithoutIhramRoute,

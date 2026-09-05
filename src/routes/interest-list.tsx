@@ -82,11 +82,10 @@ function InterestListPage() {
           </p>
           <div className="mt-6">
             <Link
-              to="/"
-              hash="wholesale"
+              to="/group-inquiry"
               className="tracked-tight inline-block rounded-none border border-[color:var(--cocoa)] px-8 py-3 text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)]"
             >
-              Contact Menasik
+              Group Inquiry
             </Link>
           </div>
         </div>

@@ -203,7 +203,7 @@ function KitWithoutIhramPage() {
           </div>
           <p className="mt-8 text-sm text-[color:var(--taupe)]">
             Organizing a group?{" "}
-            <Link to="/" hash="wholesale" className="underline decoration-[color:var(--gold-soft)] underline-offset-4 hover:text-[color:var(--gold)]">
+            <Link to="/group-inquiry" className="underline decoration-[color:var(--gold-soft)] underline-offset-4 hover:text-[color:var(--gold)]">
               Contact Menasik
             </Link>
             .

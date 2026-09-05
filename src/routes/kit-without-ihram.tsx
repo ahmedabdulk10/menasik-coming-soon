@@ -93,51 +93,6 @@ function KitWithoutIhramPage() {
         </div>
       </section>
 
-      {/* Feature spotlights */}
-      <section className="bg-[color:var(--sand)]/50 px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <IslamicStar className="mb-10" />
-          <h2 className="text-center font-serif text-3xl sm:text-4xl">Considered essentials</h2>
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <Spotlight
-              label="PREMIUM PRAYER MAT PHOTO"
-              title="Premium Prayer Mat"
-              body="A refined mat for salah wherever the journey takes you."
-            />
-            <Spotlight
-              label="PREMIUM BAG PHOTO"
-              title="Premium Bag"
-              body="A quiet, well-made carry that holds the kit and travels with you."
-            />
-            <Spotlight
-              label="PERSONAL-CARE PRODUCTS PHOTO"
-              title="Personal Care Collection"
-              body="Fragrance-free essentials selected for ihram."
-            />
-            <Spotlight
-              label="DUA BOOK AND UMRAH GUIDE PHOTO"
-              title="Dua Book & Umrah Guide"
-              body="A curated pair — duas for every stage, and the rites, step by step."
-            />
-            <Spotlight
-              label="DIGITAL TASBIH RING PHOTO"
-              title="Digital Tasbih Ring"
-              body="A discreet ring for counting dhikr — no beads to fumble with."
-            />
-            <Spotlight
-              label="USB-C ADAPTER PHOTO"
-              title="USB-C Plug Adapter"
-              body="A compact adapter for keeping devices ready on the go."
-            />
-            <Spotlight
-              label="BRANDED MENASIK BOX PHOTO"
-              title="Branded Menasik Box"
-              body="A considered box that holds and presents the kit as one."
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Box & bag section */}
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
@@ -213,15 +168,5 @@ function KitWithoutIhramPage() {
 
       <SiteFooter />
     </main>
-  );
-}
-
-function Spotlight({ label, title, body }: { label: string; title: string; body: string }) {
-  return (
-    <div>
-      <ImagePlaceholder label={label} aspect="4/3" showStar={false} />
-      <h3 className="mt-5 font-serif text-xl text-[color:var(--cocoa)]">{title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-[color:var(--taupe)]">{body}</p>
-    </div>
   );
 }

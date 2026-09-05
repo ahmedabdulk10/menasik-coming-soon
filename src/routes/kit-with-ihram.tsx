@@ -3,6 +3,7 @@ import { IslamicStar } from "@/components/IslamicStar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { KitCategoryList } from "@/components/KitCategoryList";
 import { CtaBand } from "@/components/CtaBand";
+import { PreOrderSection } from "@/components/PreOrderSection";
 import { kitWithIhram } from "@/config/products";
 import { isConfigured, siteConfig } from "@/config/site";
 import kitWithIhramImage from "@/assets/menasik-kit-with-ihram.png.asset.json";
@@ -137,6 +138,11 @@ function KitWithIhramPage() {
           </div>
         </div>
       </section>
+
+      <PreOrderSection
+        paymentUrl={siteConfig.STRIPE_KIT_WITH_IHRAM_URL}
+        price={siteConfig.KIT_PRICE_WITH_IHRAM}
+      />
 
       {/* Comparison link */}
       <section className="px-6 py-20">

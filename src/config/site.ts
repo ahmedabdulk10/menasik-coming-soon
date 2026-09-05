@@ -9,6 +9,15 @@ export const siteConfig = {
   WEB3FORMS_INTEREST_KEY: "a0d0a27c-682c-41c7-b3bb-56f630d99260",
   WEB3FORMS_GROUP_INQUIRY_KEY: "fea98b2f-9050-4e43-a0d8-56775cbb84ef",
 
+  // ---------- Pre-order / Stripe ----------
+  // Payment Link URLs and publishable key are provided via Lovable's secure secrets.
+  STRIPE_KIT_WITHOUT_IHRAM_URL: "{{STRIPE_KIT_WITHOUT_IHRAM_URL}}",
+  STRIPE_KIT_WITH_IHRAM_URL: "{{STRIPE_KIT_WITH_IHRAM_URL}}",
+  STRIPE_PUBLISHABLE_KEY: "{{STRIPE_PUBLISHABLE_KEY}}",
+  KIT_PRICE_WITHOUT_IHRAM: "$69.99",
+  KIT_PRICE_WITH_IHRAM: "$79.99",
+  KIT_SHIP_DATE: "{{KIT_SHIP_DATE}}",
+
   // ---------- Contact / social ----------
   CONTACT_EMAIL: "info@menasik.co",
   INSTAGRAM_URL: "{{INSTAGRAM_URL}}",

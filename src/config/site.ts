@@ -11,12 +11,12 @@ export const siteConfig = {
 
   // ---------- Pre-order / Stripe ----------
   // Payment Link URLs and publishable key are provided via Lovable's secure secrets.
-  STRIPE_KIT_WITHOUT_IHRAM_URL: "{{STRIPE_KIT_WITHOUT_IHRAM_URL}}",
-  STRIPE_KIT_WITH_IHRAM_URL: "{{STRIPE_KIT_WITH_IHRAM_URL}}",
-  STRIPE_PUBLISHABLE_KEY: "{{STRIPE_PUBLISHABLE_KEY}}",
+  STRIPE_KIT_WITHOUT_IHRAM_URL: "https://buy.stripe.com/00w00jbMoeri4jGgWh9Zm01",
+  STRIPE_KIT_WITH_IHRAM_URL: "https://buy.stripe.com/14AeVdg2Eeri17u5dz9Zm00",
+  STRIPE_PUBLISHABLE_KEY: "pk_live_51UCArtDqSDNQUtgy4yloLtIe1JxRXwfkKnkrjBmbyKMo0bpzLC7YnsPyT6EnEt5r6BWwNUy3En1j5ir8a3qjDkBQ00Nur9mLsy",
   KIT_PRICE_WITHOUT_IHRAM: "$69.99",
   KIT_PRICE_WITH_IHRAM: "$79.99",
-  KIT_SHIP_DATE: "{{KIT_SHIP_DATE}}",
+  KIT_SHIP_DATE: "October 15, 2026",
 
   // ---------- Contact / social ----------
   CONTACT_EMAIL: "info@menasik.co",

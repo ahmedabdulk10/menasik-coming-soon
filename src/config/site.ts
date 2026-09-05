@@ -7,7 +7,7 @@ export const siteConfig = {
   // ---------- Integration keys (replace these strings) ----------
   // MailerLite keys live server-side only (set MAILERLITE_API_KEY and
   // MAILERLITE_GROUP_ID as secrets) and are used by the waitlist server fn.
-  WEB3FORMS_ACCESS_KEY: "{{WEB3FORMS_ACCESS_KEY}}",
+  WEB3FORMS_ACCESS_KEY: "a0d0a27c-682c-41c7-b3bb-56f630d99260",
 
   // ---------- Contact / social ----------
   CONTACT_EMAIL: "info@menasik.co",

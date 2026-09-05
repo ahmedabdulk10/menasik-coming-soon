@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
-import logoAsset from "@/assets/menasik-logo.asset.json";
+import logoAsset from "@/assets/menasik-logo-header.png";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from "@/components/ui/sheet";
 
-const logo = logoAsset.url;
+const logo = logoAsset;
 
 const navLinks = [
   { to: "/kit-without-ihram", label: "Kit Without Ihram" },

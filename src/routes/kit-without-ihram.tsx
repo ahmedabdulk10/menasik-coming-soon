@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { IslamicStar } from "@/components/IslamicStar";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { SiteFooter } from "@/components/SiteFooter";
 import { KitCategoryList } from "@/components/KitCategoryList";
 import { kitWithoutIhram } from "@/config/products";

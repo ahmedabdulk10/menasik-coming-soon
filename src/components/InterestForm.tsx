@@ -45,7 +45,7 @@ export function InterestForm() {
 
     try {
       fd.append("access_key", key);
-      fd.append("subject", "Menasik — Interest List Signup");
+      fd.append("subject", "Menasik Interest List Signup");
       fd.append("from_name", "Menasik Interest List");
       fd.append("replyto", email.trim());
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -65,7 +65,7 @@ export function InterestForm() {
     return (
       <p className="fade-in mx-auto max-w-md text-center text-[color:var(--cocoa)]">
         <span className="font-serif text-2xl italic">
-          You're on the list — we'll be in touch soon, inshaAllah.
+          You're on the list. We will be in touch soon, inshaAllah.
         </span>
       </p>
     );
@@ -144,7 +144,7 @@ export function InterestForm() {
           rows={3}
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
-          placeholder="Travel dates, questions, special requests…"
+          placeholder="Travel dates, questions, anything else"
           className={`${inputClass} resize-none`}
         />
       </div>
@@ -155,7 +155,7 @@ export function InterestForm() {
           disabled={state === "loading"}
           className="tracked-tight rounded-none border border-[color:var(--gold)] bg-[color:var(--gold)] px-10 py-3 text-sm text-[color:var(--cream)] transition-all hover:bg-transparent hover:text-[color:var(--cocoa)] disabled:opacity-60"
         >
-          {state === "loading" ? "Sending…" : "Join the Interest List"}
+          {state === "loading" ? "Sending…" : "Reserve My Kit"}
         </button>
         {error && <p className="mt-3 text-base text-[color:var(--taupe)]">{error}</p>}
       </div>

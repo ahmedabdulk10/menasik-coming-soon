@@ -18,7 +18,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-[color:var(--gold-soft)]/30 bg-[color:var(--cream)]/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center" aria-label="Menasik — home">
+        <Link to="/" className="flex items-center" aria-label="Menasik home">
           <img src={logo} alt="Menasik" width={120} height={44} className="h-9 w-auto object-contain" />
         </Link>
 
@@ -38,7 +38,7 @@ export function SiteHeader() {
             className="tracked-tight rounded-none border border-[color:var(--cocoa)] px-6 py-2 text-xs text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)]"
             activeProps={{ className: "tracked-tight rounded-none border border-[color:var(--gold)] px-6 py-2 text-xs text-[color:var(--gold)]" }}
           >
-            Interest List
+            Reserve Your Kit
           </Link>
         </nav>
 
@@ -70,7 +70,7 @@ export function SiteHeader() {
                   onClick={() => setOpen(false)}
                   className="tracked-tight inline-block rounded-none border border-[color:var(--cocoa)] px-6 py-3 text-center text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)]"
                 >
-                  Interest List
+                  Reserve Your Kit
                 </Link>
               </nav>
             </SheetContent>

@@ -1,6 +1,6 @@
 // ============================================================
 // MENASIK — Central Config
-// Edit these tokens in one place. The page reads everything from here.
+// Edit these tokens in one place. The pages read everything from here.
 // ============================================================
 
 export const siteConfig = {
@@ -16,20 +16,47 @@ export const siteConfig = {
   // ---------- Copy ----------
   tagline: "Pack Less. Worship More.",
   heroSubtext:
-    "Premium Umrah kits — thoughtfully curated so you can focus on your journey.",
+    "One box with everything you need for Umrah, so your last week before departure is spent preparing your heart instead of chasing a shopping list.",
 
   teaserPoints: [
     {
-      title: "Ihram-Appropriate",
-      body: "Every item ihram-appropriate and fragrance-free.",
+      title: "Nothing Scented",
+      body: "Soap, deodorant, creme and wipes are all fragrance-free, so you stay in ihram without second-guessing a label.",
     },
     {
-      title: "Carry-On Conscious",
-      body: "Travel-sized where applicable and thoughtfully packed.",
+      title: "Fits Your Carry-On",
+      body: "Travel sizes where it matters, packed into one bag that lifts out of the box and goes straight into your luggage.",
     },
     {
-      title: "Thoughtfully Curated",
-      body: "Everything you need for the journey, in one box.",
+      title: "Nothing Forgotten",
+      body: "Prayer mat, dua book, guide, tasbih ring, scissors, safety pins. The small things people always leave at home.",
+    },
+  ],
+
+  faqs: [
+    {
+      q: "What is actually in the kit?",
+      a: "Worship items such as a prayer mat, dua book, Umrah guide and digital tasbih ring; fragrance-free personal care; and travel items like a reusable bottle, USB-C adapter, scissors and safety pins. Full lists are on each kit page.",
+    },
+    {
+      q: "Which kit should I pick?",
+      a: "If you already own your ihram, choose the Kit Without Ihram. If you want everything settled in one box, choose the Kit With Ihram, which adds a plain white two-piece ihram.",
+    },
+    {
+      q: "Is everything ihram-appropriate?",
+      a: "Yes. Every personal care item in the kit is unscented, and the rest of the kit was chosen with the rules of ihram in mind.",
+    },
+    {
+      q: "Can I bring it as carry-on?",
+      a: "The kit is packed with travel sizes where they exist. Airline and security rules change often, so check your airline before you fly.",
+    },
+    {
+      q: "Can I order for a group?",
+      a: "Yes. Travel companies, mosques and group leaders can send a group inquiry and we will come back with options for your travelers.",
+    },
+    {
+      q: "How do I order?",
+      a: "Join the interest list with the kit you want and how many travelers you have. We contact you directly as soon as your kit is ready to ship.",
     },
   ],
 } as const;

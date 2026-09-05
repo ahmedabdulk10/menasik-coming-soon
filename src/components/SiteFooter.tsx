@@ -19,7 +19,7 @@ export function SiteFooter() {
           className="h-16 w-auto object-contain opacity-90"
         />
         <p className="font-serif text-lg italic text-[color:var(--cocoa)]">
-          Menasik — Pack Less. Worship More.
+          Pack Less. Worship More.
         </p>
         <div className="flex items-center gap-6 text-[color:var(--taupe)]">
           <a

@@ -1,13 +1,19 @@
 import { useState, type FormEvent } from "react";
-import { submitInterest } from "@/lib/interest.functions";
+import { siteConfig, isConfigured } from "@/config/site";
 
 const inputClass =
   "w-full rounded-none border-b border-[color:var(--gold-soft)] bg-transparent px-1 py-3 text-base text-[color:var(--cocoa)] placeholder:text-[color:var(--taupe)]/60 outline-none transition-colors focus:border-[color:var(--gold)]";
 
+const kitLabels = {
+  "without-ihram": "Kit Without Ihram",
+  "with-ihram": "Kit With Ihram",
+  "not-sure": "Not sure yet",
+} as const;
+
 export function InterestForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [kitInterest, setKitInterest] = useState<"without-ihram" | "with-ihram" | "not-sure">("not-sure");
+  const [kitInterest, setKitInterest] = useState<keyof typeof kitLabels>("not-sure");
   const [travelers, setTravelers] = useState("");
   const [notes, setNotes] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
@@ -22,21 +28,32 @@ export function InterestForm() {
     }
     setState("loading");
 
+    const fd = new FormData();
+    fd.append("name", name.trim());
+    fd.append("email", email.trim());
+    fd.append("kit_interest", kitLabels[kitInterest]);
+    if (travelers) fd.append("travelers", travelers);
+    if (notes.trim()) fd.append("notes", notes.trim());
+
+    const key = siteConfig.WEB3FORMS_ACCESS_KEY;
+
+    if (!isConfigured(key)) {
+      await new Promise((r) => setTimeout(r, 500));
+      setState("done");
+      return;
+    }
+
     try {
-      const parsedTravelers = travelers ? Number.parseInt(travelers, 10) : undefined;
-      const result = await submitInterest({
-        data: {
-          name: name.trim() || undefined,
-          email: email.trim(),
-          kitInterest,
-          travelers:
-            parsedTravelers !== undefined && Number.isFinite(parsedTravelers) && parsedTravelers > 0
-              ? parsedTravelers
-              : undefined,
-          notes: notes.trim() || undefined,
-        },
+      fd.append("access_key", key);
+      fd.append("subject", "Menasik — Interest List Signup");
+      fd.append("from_name", "Menasik Interest List");
+      fd.append("replyto", email.trim());
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: fd,
       });
-      if (!result.ok) throw new Error("Request failed");
+      const data = await res.json();
+      if (!data?.success) throw new Error("Request failed");
       setState("done");
     } catch {
       setState("error");
@@ -94,7 +111,7 @@ export function InterestForm() {
           <select
             id="interest-kit"
             value={kitInterest}
-            onChange={(e) => setKitInterest(e.target.value as typeof kitInterest)}
+            onChange={(e) => setKitInterest(e.target.value as keyof typeof kitLabels)}
             className={inputClass}
           >
             <option value="not-sure">Not sure yet</option>
@@ -145,3 +162,4 @@ export function InterestForm() {
     </form>
   );
 }
+

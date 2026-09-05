@@ -186,13 +186,26 @@ function Landing() {
                   own your ihram, since one is not included here.
                 </p>
               </div>
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-8 flex flex-col gap-3">
+                {isConfigured(siteConfig.STRIPE_KIT_WITHOUT_IHRAM_URL) ? (
+                  <a
+                    href={siteConfig.STRIPE_KIT_WITHOUT_IHRAM_URL}
+                    className="tracked-tight inline-block w-full rounded-none border border-[color:var(--gold)] bg-[color:var(--gold)] px-8 py-3 text-center text-sm text-[color:var(--cream)] transition-all hover:bg-transparent hover:text-[color:var(--cocoa)] sm:w-auto"
+                  >
+                    Pre-Order for {siteConfig.KIT_PRICE_WITHOUT_IHRAM}
+                  </a>
+                ) : (
+                  <span className="tracked-tight inline-block w-full cursor-not-allowed rounded-none border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/40 px-8 py-3 text-center text-sm text-[color:var(--cream)] sm:w-auto">
+                    Available Soon
+                  </span>
+                )}
                 <Link
                   to="/kit-without-ihram"
-                  className="tracked-tight inline-block rounded-none border border-[color:var(--cocoa)] px-8 py-3 text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)]"
+                  className="tracked-tight inline-block w-full rounded-none border border-[color:var(--cocoa)] px-8 py-3 text-center text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)] sm:w-auto"
                 >
-                  See What's Inside
+                  View Kit
                 </Link>
+                <p className="mt-1 text-xs text-[color:var(--taupe)]">{shipsLine}</p>
               </div>
             </article>
 
@@ -216,13 +229,26 @@ function Landing() {
                   you fly.
                 </p>
               </div>
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-8 flex flex-col gap-3">
+                {isConfigured(siteConfig.STRIPE_KIT_WITH_IHRAM_URL) ? (
+                  <a
+                    href={siteConfig.STRIPE_KIT_WITH_IHRAM_URL}
+                    className="tracked-tight inline-block w-full rounded-none border border-[color:var(--gold)] bg-[color:var(--gold)] px-8 py-3 text-center text-sm text-[color:var(--cream)] transition-all hover:bg-transparent hover:text-[color:var(--cocoa)] sm:w-auto"
+                  >
+                    Pre-Order for {siteConfig.KIT_PRICE_WITH_IHRAM}
+                  </a>
+                ) : (
+                  <span className="tracked-tight inline-block w-full cursor-not-allowed rounded-none border border-[color:var(--gold)]/40 bg-[color:var(--gold)]/40 px-8 py-3 text-center text-sm text-[color:var(--cream)] sm:w-auto">
+                    Available Soon
+                  </span>
+                )}
                 <Link
                   to="/kit-with-ihram"
-                  className="tracked-tight inline-block rounded-none border border-[color:var(--gold)] bg-[color:var(--gold)] px-8 py-3 text-sm text-[color:var(--cream)] transition-all hover:bg-transparent hover:text-[color:var(--cocoa)]"
+                  className="tracked-tight inline-block w-full rounded-none border border-[color:var(--cocoa)] px-8 py-3 text-center text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)] sm:w-auto"
                 >
-                  See What's Inside
+                  View Kit
                 </Link>
+                <p className="mt-1 text-xs text-[color:var(--taupe)]">{shipsLine}</p>
               </div>
             </article>
           </div>

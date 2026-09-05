@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import kitAsset from "@/assets/menasik-kit.asset.json";
 import kitWithIhramImage from "@/assets/menasik-kit-with-ihram.png.asset.json";
 import kitWithoutIhramImage from "@/assets/menasik-kit-without-ihram.png.asset.json";
-import { siteConfig } from "@/config/site";
+import { isConfigured, siteConfig } from "@/config/site";
 import { IslamicStar, ArchMotif, PalmShadow } from "@/components/IslamicStar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FaqSection } from "@/components/FaqSection";
@@ -12,6 +12,10 @@ import logoAsset from "@/assets/menasik-logo.asset.json";
 
 const logo = logoAsset.url;
 const kitImage = kitAsset.url;
+
+const shipsLine = isConfigured(siteConfig.KIT_SHIP_DATE)
+  ? `Ships ${siteConfig.KIT_SHIP_DATE}`
+  : "Ships soon";
 
 const description =
   "Menasik packs every Umrah essential into one box. Fragrance-free care, a prayer mat, dua book, guide and travel gear, ready for your carry-on.";

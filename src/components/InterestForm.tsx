@@ -35,7 +35,7 @@ export function InterestForm() {
     if (travelers) fd.append("travelers", travelers);
     if (notes.trim()) fd.append("notes", notes.trim());
 
-    const key = siteConfig.WEB3FORMS_ACCESS_KEY;
+    const key = siteConfig.WEB3FORMS_INTEREST_KEY;
 
     if (!isConfigured(key)) {
       await new Promise((r) => setTimeout(r, 500));

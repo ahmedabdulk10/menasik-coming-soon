@@ -12,7 +12,7 @@ export function WholesaleForm() {
 
     const form = e.currentTarget;
     const fd = new FormData(form);
-    const key = siteConfig.WEB3FORMS_ACCESS_KEY;
+    const key = siteConfig.WEB3FORMS_GROUP_INQUIRY_KEY;
 
     if (!isConfigured(key)) {
       await new Promise((r) => setTimeout(r, 500));

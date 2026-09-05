@@ -162,9 +162,9 @@ function KitWithIhramPage() {
       <section className="px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <IslamicStar className="mb-10" />
-          <h2 className="font-serif text-3xl sm:text-4xl">Notify me at launch.</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl">Stay in touch.</h2>
           <p className="mx-auto mt-4 max-w-lg text-lg text-[color:var(--taupe)]">
-            Menasik is pre-launch. Join the waitlist for early access when this kit is available.
+            Join the Menasik list and we'll let you know as soon as this kit is ready to order.
           </p>
           <div className="mt-10">
             <WaitlistForm />

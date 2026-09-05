@@ -11,20 +11,20 @@ export const Route = createFileRoute("/interest-list")({
       {
         name: "description",
         content:
-          "Join the Menasik interest list — tell us which Umrah kit you're interested in and be the first to know at launch.",
+          "Join the Menasik interest list — tell us which Umrah kit you're interested in and be the first to know when it's ready.",
       },
       { property: "og:title", content: "Interest List — Menasik" },
       {
         property: "og:description",
         content:
-          "Join the Menasik interest list — tell us which Umrah kit you're interested in and be the first to know at launch.",
+          "Join the Menasik interest list — tell us which Umrah kit you're interested in and be the first to know when it's ready.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: "Interest List — Menasik" },
       {
         name: "twitter:description",
         content:
-          "Join the Menasik interest list — tell us which Umrah kit you're interested in and be the first to know at launch.",
+          "Join the Menasik interest list — tell us which Umrah kit you're interested in and be the first to know when it's ready.",
       },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -44,8 +44,8 @@ function InterestListPage() {
             Tell us what you're waiting for.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[color:var(--taupe)]">
-            Menasik is pre-launch. Share a few details and we'll reach out the moment your kit is
-            ready — with early access for those on the list.
+            Share a few details and we'll reach out the moment your kit is
+            ready to order.
           </p>
         </div>
       </section>

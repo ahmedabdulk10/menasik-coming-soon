@@ -15,20 +15,20 @@ const kitImage = kitAsset.url;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Menasik — Coming Soon | Premium Umrah Kits" },
+      { title: "Menasik | Premium Umrah Kits" },
       {
         name: "description",
         content:
-          "Menasik — premium Umrah kits. Thoughtfully curated so you can focus on your journey. Join the waitlist.",
+          "Menasik — premium Umrah kits. Thoughtfully curated so you can focus on your journey.",
       },
-      { property: "og:title", content: "Menasik — Coming Soon | Premium Umrah Kits" },
+      { property: "og:title", content: "Menasik | Premium Umrah Kits" },
       {
         property: "og:description",
         content: "Premium Umrah kits. Pack Less. Worship More.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { name: "twitter:title", content: "Menasik — Coming Soon" },
+      { name: "twitter:title", content: "Menasik — Premium Umrah Kits" },
       {
         name: "twitter:description",
         content: "Premium Umrah kits. Pack Less. Worship More.",
@@ -60,7 +60,7 @@ function Landing() {
         </div>
 
         <p className="tracked fade-up mt-10 text-sm text-[color:var(--taupe)]" style={{ animationDelay: "0.35s" }}>
-          Coming Soon
+          Premium Umrah Kits
         </p>
 
         <h1
@@ -167,13 +167,13 @@ function Landing() {
         </div>
       </section>
 
-      {/* ============== WAITLIST ============== */}
-      <section id="waitlist" className="px-6 py-24 sm:py-32">
+      {/* ============== STAY IN TOUCH ============== */}
+      <section id="stay-in-touch" className="px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <IslamicStar className="mb-10" />
-          <h2 className="font-serif text-3xl sm:text-4xl">Be the first to know.</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl">Stay close.</h2>
           <p className="mx-auto mt-4 max-w-lg text-lg text-[color:var(--taupe)]">
-            Sign up to be notified when we launch — and receive early access.
+            Join the Menasik list for updates and first access to new kits.
           </p>
           <div className="mt-10">
             <WaitlistForm />
@@ -185,7 +185,7 @@ function Landing() {
       <section className="bg-[color:var(--sand)]/60 px-6 py-24 sm:py-32">
         <div className="mx-auto max-w-5xl">
           <IslamicStar className="mb-12" />
-          <h2 className="text-center font-serif text-3xl sm:text-4xl">What's coming</h2>
+          <h2 className="text-center font-serif text-3xl sm:text-4xl">Inside every kit</h2>
           <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8">
             {siteConfig.teaserPoints.map((point, i) => (
               <div key={i} className="text-center">

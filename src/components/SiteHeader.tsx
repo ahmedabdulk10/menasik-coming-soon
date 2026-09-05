@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-[color:var(--gold-soft)]/30 bg-[color:var(--cream)]/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center" aria-label="Menasik home">
-          <img src={logo} alt="Menasik" width={180} height={66} className="h-12 w-auto object-contain md:h-14" />
+          <img src={logo} alt="Menasik" width={220} height={88} className="-my-3 h-16 w-auto object-contain md:h-24" />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">

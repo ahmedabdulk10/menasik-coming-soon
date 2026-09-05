@@ -9,6 +9,8 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as RefundPolicyRouteImport } from './routes/refund-policy'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as KitWithoutIhramRouteImport } from './routes/kit-without-ihram'
 import { Route as KitWithIhramRouteImport } from './routes/kit-with-ihram'
@@ -20,6 +22,16 @@ import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.oauth.consent'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundPolicyRoute = RefundPolicyRouteImport.update({
+  id: '/refund-policy',
+  path: '/refund-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
@@ -81,6 +93,8 @@ export interface FileRoutesByFullPath {
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
@@ -93,6 +107,8 @@ export interface FileRoutesByTo {
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
@@ -106,6 +122,8 @@ export interface FileRoutesById {
   '/kit-with-ihram': typeof KitWithIhramRoute
   '/kit-without-ihram': typeof KitWithoutIhramRoute
   '/mcp': typeof McpRoute
+  '/refund-policy': typeof RefundPolicyRoute
+  '/terms': typeof TermsRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
@@ -120,6 +138,8 @@ export interface FileRouteTypes {
     | '/kit-with-ihram'
     | '/kit-without-ihram'
     | '/mcp'
+    | '/refund-policy'
+    | '/terms'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.lovable/oauth/consent'
@@ -132,6 +152,8 @@ export interface FileRouteTypes {
     | '/kit-with-ihram'
     | '/kit-without-ihram'
     | '/mcp'
+    | '/refund-policy'
+    | '/terms'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.lovable/oauth/consent'
@@ -144,6 +166,8 @@ export interface FileRouteTypes {
     | '/kit-with-ihram'
     | '/kit-without-ihram'
     | '/mcp'
+    | '/refund-policy'
+    | '/terms'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.lovable/oauth/consent'
@@ -157,6 +181,8 @@ export interface RootRouteChildren {
   KitWithIhramRoute: typeof KitWithIhramRoute
   KitWithoutIhramRoute: typeof KitWithoutIhramRoute
   McpRoute: typeof McpRoute
+  RefundPolicyRoute: typeof RefundPolicyRoute
+  TermsRoute: typeof TermsRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   DotlovableOauthConsentRoute: typeof DotlovableOauthConsentRoute
@@ -165,6 +191,20 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-policy': {
+      id: '/refund-policy'
+      path: '/refund-policy'
+      fullPath: '/refund-policy'
+      preLoaderRoute: typeof RefundPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mcp': {
       id: '/mcp'
       path: '/mcp'
@@ -245,6 +285,8 @@ const rootRouteChildren: RootRouteChildren = {
   KitWithIhramRoute: KitWithIhramRoute,
   KitWithoutIhramRoute: KitWithoutIhramRoute,
   McpRoute: McpRoute,
+  RefundPolicyRoute: RefundPolicyRoute,
+  TermsRoute: TermsRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,

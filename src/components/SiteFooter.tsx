@@ -43,6 +43,15 @@ export function SiteFooter() {
             </svg>
           </a>
         </div>
+        <div className="mt-2 flex items-center justify-center gap-3 text-sm text-[color:var(--taupe)]">
+          <Link to="/refund-policy" className="py-2 transition-colors hover:text-[color:var(--gold)]">
+            Refund Policy
+          </Link>
+          <span className="h-1 w-1 rounded-full bg-[color:var(--gold-soft)]" aria-hidden="true" />
+          <Link to="/terms" className="py-2 transition-colors hover:text-[color:var(--gold)]">
+            Terms of Service
+          </Link>
+        </div>
         <p className="tracked-tight mt-4 text-xs text-[color:var(--taupe)]/70">
           © {new Date().getFullYear()} Menasik. All rights reserved.
         </p>

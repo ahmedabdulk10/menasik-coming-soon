@@ -6,24 +6,24 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const Route = createFileRoute("/group-inquiry")({
   head: () => ({
     meta: [
-      { title: "Group Inquiry — Menasik" },
+      { title: "Group Inquiry | Menasik" },
       {
         name: "description",
         content:
-          "For Umrah and Hajj travel companies, mosques, and group organizers — inquire about Menasik kits for your travelers.",
+          "Umrah and Hajj travel companies, mosques and group leaders can order Menasik kits for their travelers.",
       },
-      { property: "og:title", content: "Group Inquiry — Menasik" },
+      { property: "og:title", content: "Group Inquiry | Menasik" },
       {
         property: "og:description",
         content:
-          "For Umrah and Hajj travel companies, mosques, and group organizers — inquire about Menasik kits for your travelers.",
+          "Umrah and Hajj travel companies, mosques and group leaders can order Menasik kits for their travelers.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "Group Inquiry — Menasik" },
+      { name: "twitter:title", content: "Group Inquiry | Menasik" },
       {
         name: "twitter:description",
         content:
-          "For Umrah and Hajj travel companies, mosques, and group organizers — inquire about Menasik kits for your travelers.",
+          "Umrah and Hajj travel companies, mosques and group leaders can order Menasik kits for their travelers.",
       },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -43,9 +43,8 @@ function GroupInquiryPage() {
             Planning Umrah or Hajj for a group?
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[color:var(--taupe)]">
-            Menasik welcomes inquiries from Umrah and Hajj travel companies, mosques, group leaders,
-            and Islamic organizations interested in providing thoughtfully curated travel essentials
-            to their pilgrims. Tell us about your travelers and we'll be in touch.
+            Send your travelers off with everything they need. Tell us your group size and travel
+            dates, and we will come back with kit options and group pricing.
           </p>
         </div>
       </section>

@@ -29,7 +29,7 @@ export function WaitlistForm() {
     return (
       <p className="fade-in mx-auto max-w-md text-center text-[color:var(--cocoa)]">
         <span className="font-serif text-2xl italic">
-          Thank you — we'll be in touch soon, inshaAllah.
+          Thank you. We will be in touch soon, inshaAllah.
         </span>
       </p>
     );

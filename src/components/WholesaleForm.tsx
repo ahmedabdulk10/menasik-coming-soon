@@ -22,7 +22,7 @@ export function WholesaleForm() {
 
     try {
       fd.append("access_key", key);
-      fd.append("subject", "Menasik — Group Inquiry");
+      fd.append("subject", "Menasik Group Inquiry");
       fd.append("from_name", "Menasik Group Inquiry");
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -41,7 +41,7 @@ export function WholesaleForm() {
     return (
       <p className="fade-in mx-auto max-w-xl text-center text-[color:var(--cocoa)]">
         <span className="font-serif text-2xl italic">
-          Thank you — we'll reach out shortly, inshaAllah.
+          Thank you. We will reach out shortly, inshaAllah.
         </span>
       </p>
     );
@@ -89,7 +89,7 @@ export function WholesaleForm() {
           disabled={state === "loading"}
           className="tracked-tight rounded-none border border-[color:var(--cocoa)] bg-transparent px-10 py-3 text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)] disabled:opacity-60"
         >
-          {state === "loading" ? "Sending…" : "Contact Menasik"}
+          {state === "loading" ? "Sending…" : "Send Group Inquiry"}
         </button>
       </div>
       {error && (

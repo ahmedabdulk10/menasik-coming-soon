@@ -1,6 +1,9 @@
 import { useState, type FormEvent } from "react";
 import { siteConfig, isConfigured } from "@/config/site";
 
+const inputClass =
+  "w-full rounded-none border-b border-[color:var(--gold-soft)] bg-transparent px-1 py-3 text-base text-[color:var(--cocoa)] placeholder:text-[color:var(--taupe)]/60 outline-none transition-colors focus:border-[color:var(--gold)]";
+
 const kitLabels = {
   "without-ihram": "Kit Without Ihram",
   "with-ihram": "Kit With Ihram",

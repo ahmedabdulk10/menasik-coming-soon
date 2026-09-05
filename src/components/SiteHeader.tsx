@@ -9,7 +9,7 @@ const logo = logoAsset.url;
 const navLinks = [
   { to: "/kit-without-ihram", label: "Kit Without Ihram" },
   { to: "/kit-with-ihram", label: "Kit With Ihram" },
-  { to: "/interest-list", label: "Interest List" },
+  { to: "/group-inquiry", label: "Group Inquiry" },
 ] as const;
 
 export function SiteHeader() {
@@ -34,11 +34,11 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link
-            to="/"
-            hash="wholesale"
-            className="tracked-tight text-xs text-[color:var(--cocoa)] transition-colors hover:text-[color:var(--gold)]"
+            to="/interest-list"
+            className="tracked-tight rounded-none border border-[color:var(--cocoa)] px-6 py-2 text-xs text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)]"
+            activeProps={{ className: "tracked-tight rounded-none border border-[color:var(--gold)] px-6 py-2 text-xs text-[color:var(--gold)]" }}
           >
-            Contact
+            Interest List
           </Link>
         </nav>
 
@@ -66,12 +66,11 @@ export function SiteHeader() {
                   </Link>
                 ))}
                 <Link
-                  to="/"
-                  hash="wholesale"
+                  to="/interest-list"
                   onClick={() => setOpen(false)}
-                  className="tracked-tight text-sm text-[color:var(--cocoa)]"
+                  className="tracked-tight inline-block rounded-none border border-[color:var(--cocoa)] px-6 py-3 text-center text-sm text-[color:var(--cocoa)] transition-all hover:bg-[color:var(--cocoa)] hover:text-[color:var(--cream)]"
                 >
-                  Contact
+                  Interest List
                 </Link>
               </nav>
             </SheetContent>

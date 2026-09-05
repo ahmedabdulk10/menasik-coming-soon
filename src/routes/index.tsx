@@ -4,7 +4,6 @@ import kitWithIhramImage from "@/assets/menasik-kit-with-ihram.png.asset.json";
 import kitWithoutIhramImage from "@/assets/menasik-kit-without-ihram.png.asset.json";
 import { siteConfig } from "@/config/site";
 import { WaitlistForm } from "@/components/WaitlistForm";
-import { WholesaleForm } from "@/components/WholesaleForm";
 import { IslamicStar, ArchMotif, PalmShadow } from "@/components/IslamicStar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { kitWithoutIhram, kitWithIhram } from "@/config/products";
@@ -201,27 +200,6 @@ function Landing() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============== GROUP INQUIRY ============== */}
-      <section id="wholesale" className="px-6 py-24 sm:py-32">
-        <div className="mx-auto max-w-3xl text-center">
-          <IslamicStar className="mb-10" />
-          <p className="tracked text-sm text-[color:var(--gold)]">
-            For Agencies, Mosques &amp; Organizers
-          </p>
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl">
-            Planning Umrah or Hajj for a Group?
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-[color:var(--taupe)]">
-            Menasik welcomes inquiries from Umrah and Hajj travel companies, mosques, group
-            leaders, and Islamic organizations interested in providing thoughtfully curated travel
-            essentials to their pilgrims.
-          </p>
-          <div className="mt-14">
-            <WholesaleForm />
           </div>
         </div>
       </section>

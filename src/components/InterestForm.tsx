@@ -163,5 +163,3 @@ export function InterestForm() {
   );
 }
 
-const inputClass =
-  "w-full rounded-none border-b border-[color:var(--gold-soft)] bg-transparent px-1 py-3 text-base text-[color:var(--cocoa)] placeholder:text-[color:var(--taupe)]/60 outline-none transition-colors focus:border-[color:var(--gold)]";

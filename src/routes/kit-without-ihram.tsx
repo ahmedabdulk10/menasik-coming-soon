@@ -96,7 +96,13 @@ function KitWithoutIhramPage() {
       {/* Box & bag section */}
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
-          <ImagePlaceholder label="KIT ARRANGED INSIDE MENASIK BOX" aspect="4/3" />
+          <img
+            src={kitWithoutIhramImage.url}
+            alt="Menasik kit arranged in its branded box"
+            loading="lazy"
+            className="w-full rounded-sm object-cover shadow-sm"
+            style={{ aspectRatio: "4 / 3" }}
+          />
           <div>
             <p className="tracked text-sm text-[color:var(--gold)]">Organized for travel</p>
             <h2 className="mt-4 font-serif text-3xl italic text-[color:var(--cocoa)] sm:text-4xl">
